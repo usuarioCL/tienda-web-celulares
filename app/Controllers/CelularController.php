@@ -73,7 +73,7 @@ class CelularController extends BaseController
 
         $model->insert($data);
 
-        return redirect()->to('/celulares');
+        return redirect()->to('/index.php/celulares');
     }
 
 
@@ -106,7 +106,7 @@ class CelularController extends BaseController
         }
 
         $model->update($id, $data);
-        return redirect()->to('/celulares');
+        return redirect()->to('/index.php/celulares');
     }
 
     public function delete($id)
@@ -123,6 +123,6 @@ class CelularController extends BaseController
         }
 
         $model->delete($id);
-        return redirect()->to('/celulares');
+        return redirect()->to('/index.php/celulares');
     }
 }
