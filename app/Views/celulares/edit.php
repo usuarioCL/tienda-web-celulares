@@ -6,7 +6,7 @@
                 <h5 class="modal-title" id="editarCelularModalLabel">Editar Celular</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="<?= base_url('celulares/update/'.$celular['id']) ?>" method="POST" enctype="multipart/form-data">
+            <form action="/index.php/celulares/update/<?= $celular['id'] ?>" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <?= csrf_field() ?>
                     <input type="hidden" name="_method" value="PUT">
@@ -39,7 +39,7 @@
                             <label for="imagen" class="form-label">Imagen</label>
                             <?php if (!empty($celular['imagen'])): ?>
                                 <div class="mb-2">
-                                    <img src="<?= base_url($celular['imagen']) ?>" alt="Imagen actual" style="max-width: 100px; max-height: 100px; border-radius: 8px; border: 1px solid #ccc;">
+                                    <img src="/<?= $celular['imagen'] ?>" alt="Imagen actual" style="max-width: 100px; max-height: 100px; border-radius: 8px; border: 1px solid #ccc;">
                                 </div>
                             <?php endif; ?>
                             <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">

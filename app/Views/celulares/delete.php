@@ -27,7 +27,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <form action="<?= base_url('celulares/delete/' . $celular['id']) ?>" method="POST" style="display: inline;">
+                <form action="/index.php/celulares/delete/<?= $celular['id'] ?>" method="POST" style="display: inline;">
                     <?= csrf_field() ?>
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn btn-danger">

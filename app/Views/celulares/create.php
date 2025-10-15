@@ -6,7 +6,7 @@
                 <h5 class="modal-title" id="registrarCelularModalLabel">Registrar Nuevo Celular</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="<?= base_url('celulares/create') ?>" method="POST" enctype="multipart/form-data">
+            <form action="/index.php/celulares/create" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
