@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'tienda-celular-server.mysql.database.azure.com',
         'username'     => 'eduardoCL',
-        'password'     => '{your-password}',
+        'password'     => '75694349$E',
         'database'     => 'tiendaCelular',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
