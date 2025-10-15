@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
+        'hostname'     => 'tienda-celular-server.mysql.database.azure.com',
+        'username'     => 'eduardoCL',
+        'password'     => '{your-password}',
+        'database'     => 'tiendaCelular',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -37,7 +37,10 @@ class Database extends Config
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
         'swapPre'      => '',
-        'encrypt'      => false,
+        'encrypt'      => [
+            'ssl_verify' => false,
+            'ssl_ca'     => '',
+        ],
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
