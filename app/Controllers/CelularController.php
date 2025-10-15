@@ -73,7 +73,9 @@ class CelularController extends BaseController
 
         $model->insert($data);
 
-        return redirect()->to('/index.php/celulares');
+        // Redirección manual para evitar problemas de DNS
+        header('Location: /index.php/celulares');
+        exit;
     }
 
 
@@ -106,7 +108,10 @@ class CelularController extends BaseController
         }
 
         $model->update($id, $data);
-        return redirect()->to('/index.php/celulares');
+        
+        // Redirección manual para evitar problemas de DNS
+        header('Location: /index.php/celulares');
+        exit;
     }
 
     public function delete($id)
@@ -123,6 +128,9 @@ class CelularController extends BaseController
         }
 
         $model->delete($id);
-        return redirect()->to('/index.php/celulares');
+        
+        // Redirección manual para evitar problemas de DNS
+        header('Location: /index.php/celulares');
+        exit;
     }
 }
