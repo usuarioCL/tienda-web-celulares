@@ -49,16 +49,14 @@ jobs:
         with:
           name: php-app
       
-      - name: Move public contents to root
+      - name: Move public contents to root and fix paths
         run: |
           cp -r public/* .
+          # Fix the path in index.php for Azure deployment
+          sed -i "s|require FCPATH . '../app/Config/Paths.php';|require FCPATH . 'app/Config/Paths.php';|g" index.php
           ls -la
-          echo "Checking if index.php exists:"
-          ls -la index.php
-          echo "Contents of index.php (first 10 lines):"
-          head -10 index.php
-          echo "Setting permissions on index.php:"
-          chmod 755 index.php
+          echo "Checking modified index.php:"
+          grep "require FCPATH" index.php
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
