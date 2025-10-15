@@ -50,7 +50,9 @@ jobs:
           name: php-app
       
       - name: Move public contents to root
-        run: cp -r public/* .
+        run: |
+          cp -r public/* .
+          ls -la
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
