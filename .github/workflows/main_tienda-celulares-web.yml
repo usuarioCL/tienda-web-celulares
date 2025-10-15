@@ -52,10 +52,13 @@ jobs:
       - name: Move public contents to root
         run: |
           cp -r public/* .
-          chmod +x index.php
           ls -la
-          echo "Contents of index.php:"
-          head -5 index.php
+          echo "Checking if index.php exists:"
+          ls -la index.php
+          echo "Contents of index.php (first 10 lines):"
+          head -10 index.php
+          echo "Setting permissions on index.php:"
+          chmod 755 index.php
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
