@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="/">
+        <a class="navbar-brand fw-bold" href="<?= base_url() ?>">
             <i class="bi bi-phone"></i> SmartStore
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mx-2">
-                    <a class="nav-link <?= url_is('/') ? 'active fw-bold' : '' ?>" href="/">Inicio</a>
+                    <a class="nav-link <?= url_is('/') ? 'active fw-bold' : '' ?>" href="<?= base_url() ?>">Inicio</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link <?= url_is('celulares') ? 'active fw-bold' : '' ?>" href="/celulares">Catálogo</a>
+                    <a class="nav-link <?= url_is('celulares') ? 'active fw-bold' : '' ?>" href="<?= base_url('index.php/celulares') ?>">Catálogo</a>
                 </li>
             </ul>
         </div>
